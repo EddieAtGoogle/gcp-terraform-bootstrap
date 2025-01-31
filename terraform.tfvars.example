@@ -1,0 +1,50 @@
+# The unique identifier for your GCP organization
+# This can be found in the Cloud Console under IAM & Admin > Settings
+# Format: "123456789012"
+org_id = "123456789012"
+
+# The ID of your GCP billing account
+# This can be found in the Cloud Console under Billing
+# Format: "ABCDEF-123456-GHIJKL"
+# Note: You need to be a billing administrator to access this
+billing_account = "ABCDEF-123456-GHIJKL"
+
+# The name of the folder to create under your organization
+# Choose a descriptive name that reflects the folder's purpose
+# Example: "Development", "Production", "Data Science"
+folder_name = "Terraform-GCP-Bootstrap"
+
+# Names for the two projects to create
+# Project IDs must be:
+# - Globally unique across all of GCP
+# - Between 6 and 30 characters
+# - Contain only lowercase letters, numbers, and hyphens
+# Best practice: Include your company/org name and purpose
+project_names = {
+  project1 = "orgname-app-dev"    # For serverless application development
+  project2 = "orgname-ml-dev"   # For data science workloads
+}
+
+# Default region for resource deployment
+# Choose based on:
+# - Geographic proximity to users
+# - Pricing considerations
+# - Available services in each region
+# Common choices:
+# - us-central1 (Iowa) - Generally good default
+# - us-east4 (N. Virginia) - Low latency to East Coast
+# - us-west1 (Oregon) - Low latency to West Coast
+# Full list: https://cloud.google.com/compute/docs/regions-zones
+region = "us-central1"
+
+# Email address of the Google Group containing application developers
+# Must be a Google Workspace (formerly G Suite) or Cloud Identity group
+# Format: "app-developers@yourdomain.com"
+# Best practice: Create separate groups for different roles/responsibilities
+app_dev_group = "app-developers@yourdomain.com"
+
+# Email address of the Google Group containing data scientists
+# Must be a Google Workspace (formerly G Suite) or Cloud Identity group
+# Format: "data-scientists@yourdomain.com"
+# Best practice: Use groups instead of individual user accounts for easier management
+data_science_group = "data-scientists@yourdomain.com"
