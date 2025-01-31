@@ -3,11 +3,6 @@ variable "organization_id" {
   type        = string
 }
 
-variable "allowed_domain_ids" {
-  description = "List of allowed domains for identity and access management"
-  type        = list(string)
-}
-
 variable "allowed_shared_vpc_host_projects" {
   description = "List of projects allowed to be Shared VPC hosts"
   type        = list(string)
